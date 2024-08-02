@@ -1,0 +1,39 @@
+@import '../mixins.scss';
+
+.nofeedback {
+  padding: 76px 24px;
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: #3a4374;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  margin-top: 39px;
+  margin-bottom: 14px;
+
+  @include on-tablet {
+    font-size: 24px;
+    letter-spacing: -0.333px;
+    margin-top: 54px;
+    margin-bottom: 16px;
+  }
+}
+
+.description {
+  color: #647196;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 24px;
+
+  @include on-tablet {
+    font-size: 16px;
+    margin-bottom: 48px;
+  }
+}

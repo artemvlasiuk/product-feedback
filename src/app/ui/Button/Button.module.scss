@@ -1,0 +1,42 @@
+@import '../mixins.scss';
+
+.button {
+  height: 44px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  color: #f2f4fe;
+  font-size: 14px;
+  font-weight: 700;
+
+  &.primary {
+    background: #ad1fea;
+
+    &:hover {
+      background: #c75af6;
+    }
+  }
+
+  &.secondary {
+    background: #3a4374;
+
+    &:hover {
+      background: #656ea3;
+    }
+  }
+
+  &.edit {
+    background: #4661e6;
+
+    &:hover {
+      background: #7c91f9;
+    }
+  }
+
+  &.danger {
+    background: #d73737;
+
+    &:hover {
+      background: #e98888;
+    }
+  }
+}

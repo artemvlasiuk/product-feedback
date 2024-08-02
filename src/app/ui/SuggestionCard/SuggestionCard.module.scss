@@ -1,0 +1,89 @@
+@import '../mixins.scss';
+
+.card {
+  padding: 24px;
+  border-radius: 10px;
+  background: #fff;
+  position: relative;
+
+  @include on-tablet {
+    padding: 28px 32px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 40px;
+  }
+}
+
+
+.title {
+  color: #3a4374;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.181px;
+  margin-bottom: 9px;
+
+  @include on-tablet {
+    font-size: 18px;
+    letter-spacing: -0.25px;
+    margin-bottom: 4px;
+  }
+}
+
+.description {
+  color: #647196;
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 8px;
+
+  @include on-tablet {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+}
+
+.upvote {
+  margin-top: 16px;
+  width: 69px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: #f2f4fe;
+  color: #3a4374;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.181px;
+
+  @include on-tablet {
+    flex-direction: column;
+    gap: 8px;
+    width: 40px;
+    height: 53px;
+  }
+
+  &:hover {
+    background: #cfd7ff;
+  }
+}
+
+.comments {
+  position: absolute;
+  right: 24px;
+  bottom: 33px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #3a4374;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.181px;
+
+  @include on-tablet {
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

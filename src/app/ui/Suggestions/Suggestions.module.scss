@@ -1,0 +1,9 @@
+@import '../mixins.scss';
+
+.suggestions {
+  @include on-desktop {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+}

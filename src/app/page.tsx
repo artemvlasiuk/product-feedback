@@ -1,14 +1,12 @@
 import { Container } from './ui/Container';
 import { ControlPanel } from './ui/ControlPanel';
-import { Header } from './ui/Header';
-import { TopBar } from './ui/TopBar';
+import { Suggestions } from './ui/Suggestions';
 
 export default function Home() {
   return (
     <Container>
       <ControlPanel />
-      <Header />
-      <TopBar />
+      <Suggestions />
     </Container>
   );
 }

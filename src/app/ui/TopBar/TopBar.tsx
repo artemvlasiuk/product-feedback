@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from './TopBar.module.scss';
 import { SortSelector } from '../SortSelector';
+import { Button } from '../Button';
 
 export function TopBar() {
   return (
@@ -17,9 +18,7 @@ export function TopBar() {
         </div>
         <SortSelector />
       </div>
-      <button type='button' className={styles.button}>
-        + Add Feedback
-      </button>
+      <Button color='primary'>+ Add Feedback</Button>
     </div>
   );
 }

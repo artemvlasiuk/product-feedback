@@ -1,0 +1,19 @@
+@import '../mixins.scss';
+
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 16px;
+  border-radius: 10px;
+  background: #f2f4ff;
+  color: #4661e6;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  max-width: max-content;
+
+  &:hover {
+    background: #cfd7ff;
+  }
+}

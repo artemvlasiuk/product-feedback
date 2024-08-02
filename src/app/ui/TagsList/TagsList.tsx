@@ -1,14 +1,15 @@
+import { Tag } from '../Tag/Tag';
 import styles from './TagsList.module.scss';
 
 export function TagsList() {
   return (
     <ul className={styles.tags}>
-      <li className={styles.tag}>All</li>
-      <li className={styles.tag}>UI</li>
-      <li className={styles.tag}>UX</li>
-      <li className={styles.tag}>Enhancement</li>
-      <li className={styles.tag}>Bug</li>
-      <li className={styles.tag}>Feature</li>
+      <Tag>All</Tag>
+      <Tag>UI</Tag>
+      <Tag>UX</Tag>
+      <Tag>Enhancement</Tag>
+      <Tag>Bug</Tag>
+      <Tag>Feature</Tag>
     </ul>
   );
 }

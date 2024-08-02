@@ -6,6 +6,8 @@
 
   @include on-tablet {
     padding-inline: 0;
+    padding-top: 56px;
+    padding-bottom: 112px;
     max-width: 689px;
     display: flex;
     flex-direction: column;
@@ -14,5 +16,8 @@
   @include on-desktop {
     max-width: 1110px;
     flex-direction: row;
+    gap: 30px;
+    padding-top: 94px;
+    padding-bottom: 129px;
   }
 }

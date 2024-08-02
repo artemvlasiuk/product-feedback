@@ -1,0 +1,50 @@
+@import '../mixins.scss';
+
+.topbar {
+  height: 56px;
+  background: #373f68;
+  margin-inline: calc(50% - 50vw);
+  padding-inline: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include on-tablet {
+    height: 72px;
+    border-radius: 10px;
+    margin-inline: 0;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+
+.suggestions {
+  display: none;
+
+  @include on-tablet {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+.quantity {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+}
+
+.button {
+  height: 44px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  background: #ad1fea;
+  color: #f2f4fe;
+  font-size: 14px;
+  font-weight: 700;
+}

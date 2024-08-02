@@ -1,0 +1,55 @@
+@import '../mixins.scss';
+
+.sort {
+  position: relative;
+  display: flex;
+  color: #f2f4fe;
+  font-size: 13px;
+  font-weight: 400;
+  gap: 4px;
+
+  @include on-tablet {
+    font-size: 14px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+
+.options {
+  position: absolute;
+  top: 52px;
+  width: 255px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 10px 40px -7px rgba(55, 63, 104, 0.35);
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  color: #647196;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(58, 67, 116, 0.15);
+  }
+
+  &:hover {
+    color: #ad1fea;
+    font-family: Jost;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

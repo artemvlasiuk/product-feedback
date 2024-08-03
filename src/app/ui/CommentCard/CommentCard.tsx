@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from './CommentCard.module.scss';
+import { RepliesList } from '../RepliesList';
 
 export function CommentCard() {
   return (
@@ -25,6 +26,8 @@ export function CommentCard() {
         device’s dark mode turns on without the bright background it currently
         has.
       </p>
+
+      <RepliesList />
     </article>
   );
 }

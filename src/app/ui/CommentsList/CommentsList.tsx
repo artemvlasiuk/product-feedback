@@ -8,7 +8,6 @@ export function CommentsList() {
       <div className={styles.commentlist}>
         <div className={styles.quantity}>4 Comments</div>
         <CommentCard />
-        <CommentCard />
       </div>
       <NewCommentForm />
     </>

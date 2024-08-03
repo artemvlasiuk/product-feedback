@@ -1,0 +1,14 @@
+@import '../ui/mixins.scss';
+
+.feedback {
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -2,7 +2,7 @@ import styles from './Button.module.scss';
 
 interface ButtonProps {
   children: React.ReactNode;
-  color?: 'primary' | 'secondary' | 'danger' | 'edit';
+  color?: 'primary' | 'secondary' | 'danger' | 'edit' | 'back';
 }
 
 export function Button({ children, color = 'primary' }: ButtonProps) {

@@ -1,0 +1,22 @@
+@import '../mixins.scss';
+
+.commentlist {
+  padding: 24px;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include on-tablet {
+    gap: 32px;
+    padding: 24px 32px;
+  }
+}
+
+.quantity {
+  color: #3a4374;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+}

@@ -1,4 +1,3 @@
-import { NoFeedback } from '../NoFeedback';
 import { SuggestionCard } from '../SuggestionCard';
 import styles from './SuggestionsList.module.scss';
 

@@ -7,6 +7,9 @@
   color: #f2f4fe;
   font-size: 14px;
   font-weight: 700;
+  display: flex;
+  gap: 16px;
+  align-items: center;
 
   &.primary {
     background: #ad1fea;
@@ -37,6 +40,15 @@
 
     &:hover {
       background: #e98888;
+    }
+  }
+
+  &.back {
+    background: none;
+    color: #647196;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

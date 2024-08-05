@@ -1,7 +1,7 @@
 import styles from './page.module.scss';
 import { Container } from '../ui/Container';
 import { Button } from '../ui/Button';
-import { SuggestionCard } from '../ui/SuggestionCard';
+import { FeedbackCard } from '../ui/FeedbackCard';
 import Image from 'next/image';
 import { CommentsList } from '../ui/CommentsList';
 
@@ -21,7 +21,7 @@ export default function Feedback() {
           </Button>
           <Button color='edit'>Edit Feedback</Button>
         </div>
-        <SuggestionCard />
+        <FeedbackCard />
         <CommentsList />
       </div>
     </Container>

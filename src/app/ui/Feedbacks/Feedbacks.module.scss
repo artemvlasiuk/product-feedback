@@ -1,6 +1,6 @@
 @import '../mixins.scss';
 
-.suggestions {
+.feedbacks {
   @include on-desktop {
     display: flex;
     flex-direction: column;

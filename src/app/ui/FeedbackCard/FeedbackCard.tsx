@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { Tag } from '../Tag';
-import styles from './SuggestionCard.module.scss';
+import styles from './FeedbackCard.module.scss';
 
-export function SuggestionCard() {
+export function FeedbackCard() {
   return (
     <article className={styles.card}>
       <div className={styles.info}>

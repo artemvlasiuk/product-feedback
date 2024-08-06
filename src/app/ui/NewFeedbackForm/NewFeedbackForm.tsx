@@ -2,9 +2,10 @@
 
 import styles from './NewFeedbackForm.module.scss';
 import Image from 'next/image';
+import { useState } from 'react';
 import { Button } from '../Button';
 import { Textarea } from '../Textarea';
-import { useState } from 'react';
+import { Dropdown } from '../Dropdown';
 
 export function NewFeedbackForm() {
   const [feedbackText, setFeedBackText] = useState<string>('');
@@ -28,7 +29,7 @@ export function NewFeedbackForm() {
       <label className={styles.label}>
         Category
         <span>Choose a category for your feedback</span>
-        {/* DROPDOWN */}
+        <Dropdown />
       </label>
       <label className={styles.label}>
         Feedback Detail

@@ -3,10 +3,14 @@
 .container {
   margin: 0 auto;
   padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
 
   @include on-tablet {
     padding: 0;
     padding-block: 44px;
     max-width: 540px;
+    gap: 56px;
   }
 }

@@ -1,1 +1,1 @@
-export * from './NewFeedBackForm';
+export * from './NewFeedbackForm';

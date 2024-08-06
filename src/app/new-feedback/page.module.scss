@@ -1,0 +1,12 @@
+@import '../ui/mixins.scss';
+
+.newFeedback {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  @include on-tablet {
+    gap: 68px;
+    padding-top: 0;
+  }
+}

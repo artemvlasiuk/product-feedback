@@ -3,9 +3,9 @@ import styles from './RepliesList.module.scss';
 
 export function RepliesList() {
   return (
-    <>
-      <h3>Replies List</h3>
+    <ul className={styles.repliesList}>
       <ReplyCard />
-    </>
+      <ReplyCard />
+    </ul>
   );
 }

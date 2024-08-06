@@ -1,1 +1,58 @@
 @import '../mixins.scss';
+
+.reply {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &Btn {
+    margin-left: auto;
+    color: #4661e6;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  &To {
+    color: #ad1fea;
+    font-size: 13px;
+    font-weight: 700;
+  }
+}
+
+.author {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
+  @include on-tablet {
+    gap: 32px;
+  }
+
+  &Name {
+    color: #3a4374;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: -0.181px;
+  }
+
+  &Email {
+    color: #647196;
+    font-size: 13px;
+    font-weight: 400;
+  }
+}
+
+.imageWrapper {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.content {
+  color: #647196;
+  font-size: 13px;
+  font-weight: 400;
+
+  @include on-tablet {
+    padding-left: 72px;
+  }
+}

@@ -1,0 +1,91 @@
+@import '../mixins.scss';
+
+.editForm {
+  border-radius: 10px;
+  background: #fff;
+  position: relative;
+  padding: 44px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.imageWrapper {
+  position: absolute;
+  top: -20px;
+  left: 24px;
+
+  @include on-tablet {
+    left: 42px;
+  }
+}
+
+.title {
+  color: #3a4374;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+
+  @include on-tablet {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.333px;
+    margin-bottom: 16px;
+  }
+}
+
+.label {
+  color: #3a4374;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.181px;
+  display: flex;
+  flex-direction: column;
+
+  @include on-tablet {
+    font-size: 14px;
+    letter-spacing: -0.194px;
+  }
+
+  span {
+    color: #647196;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 3px;
+    margin-bottom: 16px;
+
+    @include on-tablet {
+      font-size: 14px;
+    }
+  }
+}
+
+.input {
+  border-radius: 5px;
+  background: #f7f8fd;
+  border: none;
+  outline: none;
+  height: 48px;
+  padding: 14px 16px;
+
+  &:focus {
+    border: 1px solid #4661e6;
+  }
+}
+
+.buttons {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include on-tablet {
+    flex-direction: row-reverse;
+  }
+}
+
+.buttonWrapper {
+  @include on-tablet {
+    margin-right: auto;
+  }
+}

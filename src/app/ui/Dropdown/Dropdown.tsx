@@ -4,18 +4,21 @@ import Image from 'next/image';
 import styles from './Dropdown.module.scss';
 import { useCallback, useState } from 'react';
 
-const options = ['Feature', 'UI', 'UX', 'Enhancement', 'Bug'];
+export interface DropdownProps {
+  options: string[];
+  type: string;
+  changeType: (option: string) => void;
+}
 
-export function Dropdown() {
+export function Dropdown({ options, type, changeType }: DropdownProps) {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [selectedOption, setSelectedOption] = useState('Feature');
 
   const toggleMenu = useCallback(() => {
     setIsMenuOpen((isOpen) => !isOpen);
   }, []);
   // TEST THIS FUNCTION!!!
   const handleOptionChange = (option: string) => {
-    setSelectedOption(option);
+    changeType(option);
     setIsMenuOpen(false);
   };
 
@@ -28,7 +31,7 @@ export function Dropdown() {
         onClick={toggleMenu}
         aria-controls='dropdown-options'
       >
-        {selectedOption}
+        {type}
         <Image
           alt='Check Icon'
           src='/assets/shared/icon-downvote.svg'
@@ -46,7 +49,7 @@ export function Dropdown() {
               onClick={() => handleOptionChange(option)}
             >
               {option}
-              {option === selectedOption && (
+              {option === type && (
                 <Image
                   alt='Check Icon'
                   src='/assets/shared/icon-check.svg'

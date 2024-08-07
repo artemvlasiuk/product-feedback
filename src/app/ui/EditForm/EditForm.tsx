@@ -1,28 +1,30 @@
 'use client';
 
-import styles from './NewFeedbackForm.module.scss';
-import Image from 'next/image';
 import { useState } from 'react';
 import { Button } from '../Button';
-import { Textarea } from '../Textarea';
 import { Dropdown } from '../Dropdown';
+import { Textarea } from '../Textarea';
+import styles from './EditForm.module.scss';
+import Image from 'next/image';
 
-export function NewFeedbackForm() {
+export function EditForm() {
+  const statusOptions = ['Planned', 'Suggestion', 'In-Progress', 'Live'];
   const categoryOptions = ['Feature', 'UI', 'UX', 'Enhancement', 'Bug'];
-  const [feedbackText, setFeedBackText] = useState<string>('');
+  const [edit, setEdit] = useState<string>('');
   const [category, setCategory] = useState('Feature');
+  const [status, setStatus] = useState('Planned');
 
   return (
-    <form className={styles.form}>
+    <form className={styles.editForm}>
       <div className={styles.imageWrapper}>
         <Image
           alt='New Feedback Icon'
-          src='/assets/shared/icon-new-feedback.svg'
+          src='/assets/shared/icon-edit-feedback.svg'
           width={40}
           height={40}
         />
       </div>
-      <h2 className={styles.title}>Create New Feedback</h2>
+      <h2 className={styles.title}>Editing ‘Add a dark theme option’</h2>
       <label htmlFor='title' className={styles.label}>
         Feedback Title
         <span>Add a short, descriptive headline</span>
@@ -38,19 +40,31 @@ export function NewFeedbackForm() {
         />
       </label>
       <label className={styles.label}>
+        Update Status
+        <span>Change feature state</span>
+        <Dropdown
+          options={statusOptions}
+          type={status}
+          changeType={setStatus}
+        />
+      </label>
+      <label className={styles.label}>
         Feedback Detail
         <span>
           Include any specific comments on what should be improved, added, etc.
         </span>
         <Textarea
-          placeholder={`Type your feedback here`}
-          value={feedbackText}
-          onChange={(e) => setFeedBackText(e.target.value)}
+          value={edit}
+          placeholder={`It would help people with light sensitivities and who prefer dark mode.`}
+          onChange={(e) => setEdit(e.target.value)}
         />
       </label>
       <div className={styles.buttons}>
-        <Button color='primary'>Add Feedback</Button>
+        <Button color='primary'>Save Changes</Button>
         <Button color='secondary'>Cancel</Button>
+        <div className={styles.buttonWrapper}>
+          <Button color='danger'>Delete</Button>
+        </div>
       </div>
     </form>
   );

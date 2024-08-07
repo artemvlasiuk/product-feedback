@@ -3,6 +3,11 @@ import { Button } from '../ui/Button';
 import styles from './page.module.scss';
 import { NewFeedbackForm } from '../ui/NewFeedbackForm';
 import { FormContainer } from '../ui/FormContainer';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Create  New Feedback',
+};
 
 export default function NewFeedback() {
   return (

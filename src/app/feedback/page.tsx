@@ -4,6 +4,11 @@ import { Button } from '../ui/Button';
 import { FeedbackCard } from '../ui/FeedbackCard';
 import Image from 'next/image';
 import { CommentsList } from '../ui/CommentsList';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Feedback Details',
+};
 
 export default function Feedback() {
   return (

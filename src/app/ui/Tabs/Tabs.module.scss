@@ -1,0 +1,32 @@
+@import '../mixins.scss';
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 24px;
+  height: 60px;
+  border-bottom: 1px solid rgba(140, 146, 179, 0.25);
+  margin-inline: calc(50% - 50vw);
+
+  @include on-tablet {
+    display: none;
+  }
+}
+
+.tab {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #3a4374;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.181px;
+  opacity: 0.4;
+  cursor: pointer;
+
+  &--active {
+    opacity: 1;
+    border-bottom: 4px solid #ad1fea;
+  }
+}

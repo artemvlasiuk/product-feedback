@@ -47,6 +47,8 @@
   &.back {
     background: none;
     color: #647196;
+    padding: 0;
+    height: max-content;
 
     &:hover {
       text-decoration: underline;

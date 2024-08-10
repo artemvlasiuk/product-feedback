@@ -1,5 +1,23 @@
 @import '../ui/mixins.scss';
 
+.wrapper {
+  margin: 0 auto;
+  padding-inline: 24px;
+
+  @include on-tablet {
+    padding-inline: 0;
+    padding-top: 56px;
+    padding-bottom: 112px;
+    max-width: 689px;
+  }
+
+  @include on-desktop {
+    max-width: 1110px;
+    padding-top: 94px;
+    padding-bottom: 129px;
+  }
+}
+
 .header {
   display: flex;
   justify-content: space-between;

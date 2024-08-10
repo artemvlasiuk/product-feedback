@@ -1,0 +1,114 @@
+@import '../mixins.scss';
+
+.item {
+  border-radius: 10px;
+  background: #fff;
+  padding: 18px 24px 24px;
+  border-top: 6px solid #ad1fea;
+
+  @include on-tablet {
+    padding-inline: 20px;
+  }
+
+  @include on-desktop {
+    padding: 18px 32px 32px;
+  }
+
+  &Name {
+    color: #3a4374;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: -0.181px;
+    margin-bottom: 9px;
+
+    @include on-desktop {
+      margin-bottom: 4px;
+    }
+  }
+
+  &Description {
+    color: #647196;
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 8px;
+
+    @include on-tablet {
+      margin-bottom: 24px;
+    }
+
+    @include on-desktop {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.status {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #647196;
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 16px;
+
+  @include on-tablet {
+    margin-bottom: 14px;
+  }
+
+  @include on-desktop {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+}
+
+.circle {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ad1fea;
+}
+
+.actions {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.upvote {
+  width: 69px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: #f2f4fe;
+  color: #3a4374;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.181px;
+
+  @include on-tablet {
+    flex-direction: column;
+    gap: 8px;
+    width: 40px;
+    height: 53px;
+  }
+
+  &:hover {
+    background: #cfd7ff;
+  }
+}
+
+.comments {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #3a4374;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.181px;
+}

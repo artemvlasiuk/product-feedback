@@ -1,12 +1,12 @@
-'use client';
-
-import { useState } from 'react';
 import styles from './Tabs.module.scss';
 
-const tabs = ['Planned', 'In-Progress', 'Live'];
+interface TabsProps {
+  tabs: string[];
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
+}
 
-export function Tabs() {
-  const [activeTab, setActiveTab] = useState('In-Progress');
+export function Tabs({ tabs, activeTab, setActiveTab }: TabsProps) {
   return (
     <aside className={styles.tabs}>
       {tabs.map((tab) => (

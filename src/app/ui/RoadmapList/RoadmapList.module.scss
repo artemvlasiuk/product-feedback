@@ -1,0 +1,72 @@
+@import '../mixins.scss';
+
+.title {
+  color: #3a4374;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  margin-top: 24px;
+
+  @include on-tablet {
+    font-size: 14px;
+    letter-spacing: -0.194px;
+    margin-top: 32px;
+  }
+
+  @include on-desktop {
+    font-size: 18px;
+    letter-spacing: -0.25px;
+    margin-top: 48px;
+  }
+}
+
+.description {
+  color: #647196;
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 24px;
+
+  @include on-tablet {
+    font-size: 14px;
+  }
+
+  @include on-desktop {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+}
+
+.list {
+  @include on-tablet {
+    display: flex;
+    gap: 10px;
+  }
+
+  @include on-desktop {
+    gap: 30px;
+  }
+}
+
+.column {
+  display: none;
+
+  @include on-tablet {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include on-desktop {
+    gap: 24px;
+  }
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+}

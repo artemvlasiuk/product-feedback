@@ -1,29 +1,52 @@
+import { getLocalData } from '@/app/data/api';
 import styles from './RoadMap.module.scss';
+import { ProductRequest } from '@/types';
+import Link from 'next/link';
 
-const roadMapList = [
-  {
-    name: 'Planned',
-    background: '#F49F85',
-  },
-  {
-    name: 'In-Progress',
-    background: '#AD1FEA',
-  },
-  {
-    name: 'Live',
-    background: '#62BCFA',
-  },
-];
+export async function RoadMap() {
+  const { productRequests }: { productRequests: ProductRequest[] } =
+    await getLocalData();
 
-export function RoadMap() {
+  const plannedRequests = productRequests.filter(
+    (request) => request.status === 'planned'
+  ).length;
+
+  const inProgressRequests = productRequests.filter(
+    (request) => request.status === 'in-progress'
+  ).length;
+
+  const liveRequests = productRequests.filter(
+    (request) => request.status === 'suggestion'
+  ).length;
+
+  const roadMapList = [
+    {
+      name: 'Planned',
+      background: '#F49F85',
+      quantity: plannedRequests,
+    },
+    {
+      name: 'In-Progress',
+      background: '#AD1FEA',
+      quantity: inProgressRequests,
+    },
+    {
+      name: 'Live',
+      background: '#62BCFA',
+      quantity: liveRequests,
+    },
+  ];
+
   return (
     <div className={styles.roadmap}>
       <div className={styles.title}>
         Roadmap
-        <button className={styles.button}>View</button>
+        <Link href='/roadmap' className={styles.button}>
+          View
+        </Link>
       </div>
       <ul className={styles.list}>
-        {roadMapList.map(({ name, background }) => (
+        {roadMapList.map(({ name, background, quantity }) => (
           <li key={background} className={styles.item}>
             <div className={styles.name}>
               <div
@@ -32,7 +55,7 @@ export function RoadMap() {
               ></div>
               {name}
             </div>
-            <p className={styles.quantity}>2</p>
+            <p className={styles.quantity}>{quantity}</p>
           </li>
         ))}
       </ul>

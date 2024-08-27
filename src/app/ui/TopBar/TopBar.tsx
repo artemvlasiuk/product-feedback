@@ -2,8 +2,11 @@ import Image from 'next/image';
 import styles from './TopBar.module.scss';
 import { SortSelector } from '../SortSelector';
 import { Button } from '../Button';
+import { getLocalData } from '@/app/data/api';
+import Link from 'next/link';
 
-export function TopBar() {
+export async function TopBar() {
+  const { productRequests } = await getLocalData();
   return (
     <div className={styles.topbar}>
       <div className={styles.actions}>
@@ -14,11 +17,15 @@ export function TopBar() {
             height={24}
             src='/assets/suggestions/icon-suggestions.svg'
           />
-          <div className={styles.quantity}>6 Suggestions</div>
+          <div
+            className={styles.quantity}
+          >{`${productRequests.length} Suggestions`}</div>
         </div>
         <SortSelector />
       </div>
-      <Button color='primary'>+ Add Feedback</Button>
+      <Link href='/new-feedback' className={styles.link}>
+        <Button color='primary'>+ Add Feedback</Button>
+      </Link>
     </div>
   );
 }

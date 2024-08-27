@@ -1,16 +1,19 @@
 import Image from 'next/image';
 import { Tag } from '../Tag';
 import styles from './FeedbackCard.module.scss';
+import { ProductRequest } from '@/types';
 
-export function FeedbackCard() {
+interface FeedbackCardProps {
+  request: ProductRequest;
+}
+
+export function FeedbackCard({ request }: FeedbackCardProps) {
   return (
     <article className={styles.card}>
       <div className={styles.info}>
-        <h4 className={styles.title}>Add tags for solutions</h4>
-        <p className={styles.description}>
-          Easier to search for solutions based on a specific stack.
-        </p>
-        <Tag>Enhancement</Tag>
+        <h4 className={styles.title}>{request.title}</h4>
+        <p className={styles.description}>{request.description}</p>
+        <Tag>{request.category}</Tag>
       </div>
       <button type='button' className={styles.upvote}>
         <Image
@@ -19,17 +22,19 @@ export function FeedbackCard() {
           width={8}
           height={4}
         />
-        112
+        {request.upvotes}
       </button>
-      <div className={styles.comments}>
-        <Image
-          alt='Comments Icon'
-          src='/assets/shared/icon-comments.svg'
-          width={18}
-          height={16}
-        />
-        2
-      </div>
+      {request.comments && (
+        <div className={styles.comments}>
+          <Image
+            alt='Comments Icon'
+            src='/assets/shared/icon-comments.svg'
+            width={18}
+            height={16}
+          />
+          {request.comments?.length}
+        </div>
+      )}
     </article>
   );
 }

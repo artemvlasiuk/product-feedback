@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Product Feedback Dashboard',
 };
 
-export default function Home() {
+export default async function Home() {
   return (
     <Container>
       <ControlPanel />

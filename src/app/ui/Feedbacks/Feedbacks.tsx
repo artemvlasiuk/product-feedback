@@ -10,7 +10,6 @@ export function Feedbacks() {
       <Header />
       <TopBar />
       <FeedbacksList />
-      
     </main>
   );
 }

@@ -1,26 +1,28 @@
 import Image from 'next/image';
 import styles from './ReplyCard.module.scss';
+import { Reply } from '@/types';
 
-export function ReplyCard() {
+interface ReplyCardProps {
+  reply: Reply;
+}
+
+export function ReplyCard({ reply }: ReplyCardProps) {
+  const imageUrl = reply.user.image.replace(/^\./, '');
+
   return (
     <article className={styles.reply}>
       <div className={styles.author}>
         <div className={styles.imageWrapper}>
-          <Image
-            alt='Author photo'
-            src='/assets/user-images/image-anne.jpg'
-            width={40}
-            height={40}
-          />
+          <Image alt='Author photo' src={imageUrl} width={40} height={40} />
         </div>
         <div className={styles.authorInfo}>
-          <p className={styles.authorName}>Elijah Moss</p>
-          <p className={styles.authorEmail}>@hexagon.bestagon</p>
+          <p className={styles.authorName}>{reply.user.name}</p>
+          <p className={styles.authorEmail}>{reply.user.username}</p>
         </div>
         <button className={styles.replyBtn}>Reply</button>
       </div>
       <p className={styles.content}>
-        <span className={styles.replyTo}>@hummingbird1</span>
+        <span className={styles.replyTo}>{reply.replyingTo}</span>
         {` `}
         While waiting for dark mode, there are browser extensions that will also
         do the job. Search for dark theme followed by your browser. There might

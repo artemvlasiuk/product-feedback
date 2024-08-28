@@ -14,7 +14,7 @@ export function RoadmapList({ activeTab }: RoadmapListProps) {
         }`}
       >
         <h4 className={styles.title}>Planned (2)</h4>
-        <p className={styles.description}>Features currently being developed</p>
+        <p className={styles.description}>Ideas prioritized for research</p>
         <div className={styles.wrapper}>
           <RoadmapListCard />
           <RoadmapListCard />
@@ -26,7 +26,7 @@ export function RoadmapList({ activeTab }: RoadmapListProps) {
         }`}
       >
         <h4 className={styles.title}>In-Progress (3)</h4>
-        <p className={styles.description}>Features currently being developed</p>
+        <p className={styles.description}>Currently being developed</p>
         <div className={styles.wrapper}>
           <RoadmapListCard />
           <RoadmapListCard />
@@ -39,7 +39,7 @@ export function RoadmapList({ activeTab }: RoadmapListProps) {
         }`}
       >
         <h4 className={styles.title}>Live (1)</h4>
-        <p className={styles.description}>Features currently being developed</p>
+        <p className={styles.description}>Released features</p>
         <div className={styles.wrapper}>
           <RoadmapListCard />
         </div>

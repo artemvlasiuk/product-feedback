@@ -1,11 +1,17 @@
+import { Reply } from '@/types';
 import { ReplyCard } from '../ReplyCard';
 import styles from './RepliesList.module.scss';
 
-export function RepliesList() {
+interface RepliesListProps {
+  replies: Reply[];
+}
+
+export function RepliesList({ replies }: RepliesListProps) {
   return (
     <ul className={styles.repliesList}>
-      <ReplyCard />
-      <ReplyCard />
+      {replies.map((reply) => (
+        <ReplyCard reply={reply} key={reply.content} />
+      ))}
     </ul>
   );
 }

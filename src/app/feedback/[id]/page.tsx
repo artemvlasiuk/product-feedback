@@ -18,6 +18,7 @@ export default async function Feedback({ params }: { params: { id: string } }) {
   const requestToShow = productRequests.find(
     (request: ProductRequest) => request.id.toString() === id
   );
+  const comments = requestToShow?.comments;
 
   return (
     <Container>
@@ -35,7 +36,7 @@ export default async function Feedback({ params }: { params: { id: string } }) {
           <Button color='edit'>Edit Feedback</Button>
         </div>
         <FeedbackCard request={requestToShow} />
-        <CommentsList />
+        {comments && <CommentsList comments={comments} />}
       </div>
     </Container>
   );
